@@ -18,10 +18,13 @@ public class EntityTesting implements ModInitializer {
      * The entity is registered under the SpawnGroup#CREATURE category, which is what most animals and passive/neutral mobs use.
      * It has a hitbox size of .75x.75, or 12 "pixels" wide (3/4ths of a block).
      */
+    public static Identifier CUBE_MOB_ID = new Identifier("entitytesting", "cube");
+
     public static final EntityType<CubeEntity> CUBE = Registry.register(
             Registry.ENTITY_TYPE,
-            new Identifier("entitytesting", "cube"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CubeEntity::new).dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
+            CUBE_MOB_ID,
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, CubeEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.75f, 0.75f)).build()
     );
 
     @Override
