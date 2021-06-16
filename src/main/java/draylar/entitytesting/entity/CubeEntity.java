@@ -1,7 +1,7 @@
 package draylar.entitytesting.entity;
 
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.mob.MobEntityWithAi;
+import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.world.World;
 
 /*
@@ -11,9 +11,10 @@ import net.minecraft.world.World;
  * MobEntity has movement controls and AI capabilities.
  * MobEntityWithAi has pathfinding favor and slightly tweaked leash behavior.
  */
-public class CubeEntity extends MobEntityWithAi {
+public class CubeEntity extends PathAwareEntity {
 
-    public CubeEntity(EntityType<? extends MobEntityWithAi> entityType, World world) {
+    public CubeEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+
         super(entityType, world);
     }
 }

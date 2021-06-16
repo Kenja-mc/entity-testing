@@ -1,25 +1,33 @@
 package draylar.entitytesting.client.model;
 
 import draylar.entitytesting.entity.CubeEntity;
-import net.minecraft.client.model.ModelPart;
+import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.Entity;
 
-public class CubeEntityModel extends EntityModel<CubeEntity> {
+public class CubeEntityModel<T extends Entity> extends EntityModel<T> {
 
     private final ModelPart base;
 
-    public CubeEntityModel() {
-        this.textureHeight = 64;
-        this.textureWidth = 64;
+    public CubeEntityModel(ModelPart root) {
+        this.base = root.getChild("base");
+    }
 
-        base = new ModelPart(this, 0, 0);
-        base.addCuboid(-6, -6, -6, 12, 12, 12);
+    public static TexturedModelData createModelData() {
+        ModelData modelData = new ModelData();
+        ModelPartData modelPartData = modelData.getRoot();
+        modelPartData.addChild("base", ModelPartBuilder.create()
+                .cuboid(-6, -6, -6, 12, 12, 12),
+                ModelTransform.pivot(0, 0, 0)
+        );
+
+        return TexturedModelData.of(modelData, 64, 64);
     }
 
     @Override
-    public void setAngles(CubeEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+    public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
 
     }
 

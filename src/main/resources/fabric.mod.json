@@ -22,8 +22,8 @@
     "entity-testing.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.8.7+build.201",
+    "fabricloader": ">=0.11.6",
     "fabric": "*",
-    "minecraft": "1.16-rc.3"
+    "minecraft": "1.17"
   }
 }
