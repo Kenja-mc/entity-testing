@@ -1,10 +1,10 @@
-draylar/entitytesting/EntityTestingClient.java
- draylar.entitytesting.EntityTestingClient
-draylar/entitytesting/client/renderer/CubeEntityRenderer.java
- draylar.entitytesting.client.renderer.CubeEntityRenderer
+draylar/entitytesting/EntityTesting.java
+ draylar.entitytesting.EntityTesting
 draylar/entitytesting/entity/CubeEntity.java
  draylar.entitytesting.entity.CubeEntity
 draylar/entitytesting/client/model/CubeEntityModel.java
  draylar.entitytesting.client.model.CubeEntityModel
-draylar/entitytesting/EntityTesting.java
- draylar.entitytesting.EntityTesting
+draylar/entitytesting/EntityTestingClient.java
+ draylar.entitytesting.EntityTestingClient
+draylar/entitytesting/client/renderer/CubeEntityRenderer.java
+ draylar.entitytesting.client.renderer.CubeEntityRenderer
